@@ -1,0 +1,31 @@
+fields:
+  link_caption:
+    type: text
+  link_href:
+    type: text
+  dismiss:
+    type: text
+  message:
+    type: text
+  position:
+    type: select
+    options:
+      - bottom
+      - top
+      - bottom-left
+      - bottom-right
+  theme:
+    type: select
+    options:
+      - block
+      - classic
+      - edgeless
+      - wire
+  popup_background_color:
+    type: text
+  popup_text_color:
+    type: text
+  button_background_color:
+    type: text
+  button_text_color:
+    type: text

@@ -1,0 +1,25 @@
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+        {{ if popup_background_color }} "background": "{{ popup_background_color }}", {{ /if }}
+        {{ if popup_text_color }} "text": "{{ popup_text_color }}" {{ /if }}
+    },
+    "button": {
+        {{ if button_background_color }} "background": "{{ button_background_color }}", {{ /if }}
+        {{ if button_text_color }} "text": "{{ button_text_color }}" {{ /if }}
+    }
+  },
+  "theme": "{{ theme }}",
+  {{ if position }} "position": "{{ position }}", {{ /if }}
+  "content": {
+    {{ if message }} "message": "{{ message }}", {{ /if }}
+    {{ if dismiss }} "dismiss": "{{ dismiss }}", {{ /if }}
+    {{ if link_caption }} "link": "{{ link_caption }}", {{ /if }}
+    {{ if link_href }} "href": "{{ link_href }}" {{ /if }}
+  }
+})});
+</script>
